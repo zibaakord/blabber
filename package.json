@@ -1,0 +1,21 @@
+{
+  "name": "blabber",
+  "version": "1.0.0",
+  "description": "A chatroom to blabber with friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zibaakord/blabber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zibaakord/blabber/issues"
+  },
+  "homepage": "https://github.com/zibaakord/blabber#readme"
+}
