@@ -4,9 +4,9 @@
   "description": "A chatroom to blabber with friends",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zibaakord/blabber.git"
@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/zibaakord/blabber/issues"
   },
-  "homepage": "https://github.com/zibaakord/blabber#readme"
+  "homepage": "https://github.com/zibaakord/blabber#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }

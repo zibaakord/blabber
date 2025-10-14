@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="chat-container">
+
+        <!-- Members -->
+        <div id="chat-members">
+            <div id="members-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="a4a4a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="headerr-icon">
+                    <path d="M4 5h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 19h16" />
+                </svg>
+                <input type="text" id="members-search" placeholder="search">
+            </div>
+
+            <!-- Member profiles with online/offline status -->
+            <div class="members">
+                <div class="members-profile">
+                    <img src="">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="chat-messages">
+
+            <div id="messages">
+                <div class="own-message"></div>
+                <div class="others-message"></div>
+            </div>
+
+            <!-- Chat Input -->
+            <div id="chat-input">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#a4a4a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="input-icons">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                    <line x1="9" x2="9.01" y1="9" y2="9" />
+                    <line x1="15" x2="15.01" y1="9" y2="9" />
+                </svg>
+                <input type="text" id="input-message" placeholder="Message">
+                <button id="send-button" ><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="#a4a4a4" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="input-icons">
+                        <path
+                            d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z" />
+                        <path d="M6 12h16" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+
+</html>
