@@ -92,39 +92,29 @@ body {}
     scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .own-message {
-    display: none;
     background-color: var(--own--message--bg--clr);
     color: var(--messages--clr);
     padding: 8px 12px;
     border-radius: 12px;
     max-width: 70%;
-    margin: 6px 0;
+    margin: 6px 9px;
     align-self: flex-end;
+    transition: all 0.2s ease;
 }
 
 .others-message {
-    display: none;
     background-color: var(--others--message--bg--clr);
     color: var(--messages--clr);
     padding: 8px 12px;
     border-radius: 12px;
     max-width: 70%;
-    margin: 6px 0;
+    margin: 6px 9px;
     align-self: flex-start;
-}
-
-.own-message,
-.others-message {
     transition: all 0.2s ease;
-    opacity: 0;
-}
-
-.own-message.show,
-.others-message.show {
-    opacity: 1;
 }
 
 #members-header {
@@ -132,9 +122,8 @@ body {}
     height: 45px;
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: relative;
     top: 0;
-    left: 40px;
 }
 
 #members-search {
@@ -142,7 +131,7 @@ body {}
     color: var(--members--search--text);
     border: none;
     border-radius: 10px;
-    width: 280px;
+    width: 70%;
     height: 30px;
     position: absolute;
     top: 20px;

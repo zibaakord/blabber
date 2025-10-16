@@ -1,4 +1,4 @@
-const socket = io('http://localhost:5500');
+const socket = io('http://localhost:3000');
 const currentUser = 'Ziba';
 
 function sendMessage() {
@@ -14,13 +14,13 @@ function sendMessage() {
 socket.on('chatMessage', (message) => {
   const messages = document.getElementById('messages');
   const messageDiv = document.createElement('div');
-  
+
   messageDiv.textContent = message.text || message;
-  
+
   messageDiv.classList.add(
     message.sender === currentUser ? 'own-message' : 'others-message'
   );
-  
+
   messages.appendChild(messageDiv);
   messages.scrollTop = messages.scrollHeight;
 });
