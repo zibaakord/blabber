@@ -33,3 +33,34 @@ sendButton.addEventListener('click', sendMessage);
 input.addEventListener('keypress', e => {
   if (e.key === 'Enter') sendMessage();
 });
+
+const members = document.getElementById('members');
+
+socket.on('userConnected', (user) => {
+  const userDiv = document.createElement('div');
+  userDiv.classList.add('members-profile');
+
+  const profPic = document.createElement('img');
+  profPic.classList.add('profile-picture');
+  profPic.src = user.profilePic || 'default.png';
+
+  const infoDiv = document.createElement('div');
+
+  const userName = document.createElement('p');
+  userName.classList.add('user-name');
+  userName.textContent = user.name;
+
+  const userLastSeen = document.createElement('p');
+  userLastSeen.classList.add('user-lastseen');
+  userLastSeen.textContent = 'Online';
+
+  infoDiv.appendChild(userName);
+  infoDiv.appendChild(userLastSeen);
+
+  userDiv.appendChild(profPic);
+  userDiv.appendChild(infoDiv);
+
+  members.appendChild(userDiv);
+  members.scrollTop = members.scrollHeight;
+});
+

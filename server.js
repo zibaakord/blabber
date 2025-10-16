@@ -17,11 +17,19 @@ const io = new Server(server, {
 const users = new Set();
 
 io.on('connection', (socket) => {
-  console.log('A user connected');
+  console.log('A user connected:', socket.id);
+
+  const user = {
+    id: socket.id,
+    name: `User-${socket.id.slice(0, 5)}`,
+    profilePic: null
+  };
 
   users.add(socket.id);
 
   io.emit('userCount', users.size);
+
+  socket.broadcast.emit('userConnected', user);
 
   socket.on('chatMessage', (message) => {
     console.log('Received message:', message);
@@ -29,9 +37,11 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    console.log('A user disconnected');
+    console.log('A user disconnected:', socket.id);
     users.delete(socket.id);
+
     io.emit('userCount', users.size);
+    io.emit('userDisconnected', user.id);
   });
 });
 
