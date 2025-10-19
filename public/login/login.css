@@ -1,0 +1,165 @@
+:root {
+    --form--bg--clr: #36393F;
+    --login--button--bg--clr: #5865F2;
+    --input--bg--clr: #202225;
+    --link--text--clr: #00AFF4;
+    --text--clr: #B1B3B6;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/background/login-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-container {
+    display: flex;
+    background-color: var(--form--bg--clr);
+    height: 335px;
+    width: 650px;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    margin-left: -20px;
+}
+
+.form-titles {
+    justify-content: center;
+    flex-direction: column;
+    line-height: 0.65;
+    padding: 15px;
+}
+
+.main-title {
+    color: white;
+    padding-left: 28px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.paragraph-title {
+    color: var(--text--clr);
+    font-weight: 60;
+    font-size: 13px;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-phone-input,
+.password-input {
+    background-color: var(--input--bg--clr);
+    border: none;
+    border-radius: 4px;
+    width: 310px;
+    height: 30px;
+    margin-bottom: 21px;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    font-size: 11px;
+    color: var(--text--clr);
+    margin-bottom: 6px;
+}
+
+.required {
+    color: rgb(255, 76, 76);
+    margin-left: 10px;
+}
+
+.login-button {
+    background-color: var(--login--button--bg--clr);
+    color: white;
+    width: 330px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    margin-top: 18px;
+}
+
+.forget-password {
+    color: var(--link--text--clr);
+    font-weight: 30;
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.account-register {
+    color: var(--text--clr);
+    font-weight: 30;
+    font-size: 12px;
+    top: -13px;
+    margin-bottom: 17px;
+}
+
+.register-link {
+    color: var(--link--text--clr);
+    padding-left: 8px;
+}
+
+.qr-code {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    padding-right: 23px;
+}
+
+.qr-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    margin-top: 45px;
+    margin-right: 12px;
+}
+
+.qr-paragraphs {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-login-title {
+    margin-bottom: -7px;
+    margin-right: 10px;
+    color: white;
+}
+
+.qr-login-paragraph {
+    color: var(--text--clr);
+    font-size: 12px;
+}
+
+.centered-line1 {
+    margin-left: 35px;
+}
+
+.centered-line2 {
+    margin-left: 50px;
+}
